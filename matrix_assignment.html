@@ -18,7 +18,7 @@
         <br>
         <br>
 
-        <button class="rainbow rainbow-2" inputmode="submit" onclick="func()">Submit</button>
+        <button class="rainbow rainbow-2" inputmode="submit" onclick="func(); return false">Submit</button>
     </div>
     <script>
         function func() {
@@ -57,7 +57,7 @@
                 document.write("<tr>"); document.write("<td id='i25' style='border: 1px solid black;padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i26' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='i27' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
                 document.write("</table>");
                 document.write('</div>')
-                document.write('<button onclick="calc()"  style="margin-left:630px; margin-top:50px; display: flex;"> Calculate</button>')
+                document.write('<button onclick="calc();  return false"  style="margin-left:630px; margin-top:50px; display: flex;"> Calculate</button>')
 
             }
             else if (input1 == 2 && input2 == 2) {
@@ -77,7 +77,7 @@
                 document.write("<tr>"); document.write("<td id='j11' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td> <td id='j12' style='border: 1px solid black; padding-left:10px; padding-right:10px; background-color: lightblue;'></td>")
                 document.write("</table>");
                 document.write('</div>')
-                document.write('<button onclick="calco()" style="margin-left:630px; margin-top:50px; display: flex;"> Calculate</button>')
+                document.write('<button onclick="calco();  return false" style="margin-left:630px;class="rainbow rainbow-2" margin-top:50px; display: flex;"> Calculate</button>')
 
             }
 
@@ -121,7 +121,7 @@
                 document.write("</table>");
 
                 document.write('</div>')
-                document.write('<button onclick="calcu()" style="margin-top:10px; display: flex;"> Calculate</button>')
+                document.write('<button onclick="calcu();  return false" style="margin-top:10px;text-align:center; display: flex;"> Calculate</button>')
             }
         }
         function calc() {
