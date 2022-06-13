@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+b {
+    color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input {
+    text-align: center;
+    width: 20%;
+}
+
+div {
+    text-align: center;
+}
+
+.rainbow {
+    background-color: #867575;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+
+}
+
+.rainbow-2:hover {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    animation: 2s linear infinite;
+}

@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="matrix_assignment.css">
 </head>
 
 <body>
-    <h1 style="text-align: center;">Matrix App</h1>
-    <input placeholder="Num input" min="2" type="text" size="5" id="input1" required>
-    <span><b>X</b></span>
-    <input placeholder="Num input" min="2" type="text" size="5" id="input2" required>
-    <button inputmode="submit" onclick="func()">Submit</button>
+    <h1> MatriX ApP</h1>
+    <div>
+        <input class="input" placeholder="Num input" min="2" type="text" size="5" id="input1" required>
+        <span><b>X</b></span>
+        <input class="input" placeholder="Num input" min="2" type="text" size="5" id="input2" required>
+        <br>
+        <br>
+
+        <button class="rainbow rainbow-2" inputmode="submit" onclick="func()">Submit</button>
+    </div>
     <script>
         function func() {
             let input1 = Number(document.querySelector('#input1').value);
