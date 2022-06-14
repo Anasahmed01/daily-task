@@ -1,0 +1,50 @@
+body {
+    background-image: url(background\ img.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+
+
+
+button {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #00ffff;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #04ffe6;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+    color: black;
+}
