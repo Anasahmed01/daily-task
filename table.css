@@ -1,4 +1,4 @@
-/* body {
+body {
     text-align: center;
     background-color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -9,18 +9,19 @@
     background-color: antiquewhite;
     border-radius: 60px;
 }
+
 #number2 {
     background-color: antiquewhite;
     border-radius: 60px;
 }
-button:hover{
-cursor: crosshair;
-}
-div{
-    border-radius: 10%;
-    border-style: dashed;
-   margin-left: 40%;
-   margin-right: 40%;
+
+button:hover {
+    cursor: wait;
 }
 
- */
+div {
+    border-radius: 10%;
+    border-style: dashed;
+    margin-left: 40%;
+    margin-right: 40%;
+}

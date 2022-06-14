@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,42 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="" href="app.js">
 </head>
 
 <body>
-    <form onsubmit="printTable(); return false">
+    <a href="table.html">TABLE_PRINT</a>
 
-        <label for="number">enter a table</label>
-
-        <input required min="2" type="number" id="table">
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div>
-        <script>
-            function printTable() {
-
-                let table = document.querySelector("#table").value
-
-                for (let i = 0; i < 10; i++) {
-
-                    console.log(`${table}  x  ${i + 1}  =  ${table * (i + 1)} `)
-
-                    let r = document.write(`<br>  ${table}  x  ${i + 1}  =  ${table * (i + 1)} `)
-                }
-
-
-            }
-
-        </script>
-    </div>
 </body>
 
-</html> -->
+</html>
