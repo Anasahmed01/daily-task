@@ -15,7 +15,7 @@
         <h1> Matrix Multiply Table</h1>
         <form onsubmit="getinput(); return false">
 
-            <input type="number" min="2" id="getinput1" placeholder="number1" required>
+            <input type="number"  min="2" id="getinput1" placeholder="number1" required>
             <input type="number" min="2" id="getinput2" placeholder="number2" required>
             <button type="submit">Check</button>
 
@@ -58,7 +58,7 @@
                     matrix1.innerHTML +=
                     `<input class="m1${i} m1${j}" id="m1${i}${j}" placeholder="0" type="number">`;
                     matrix2.innerHTML +=
-                    `<input class="m2${i} m2${j}" id="m2${i}${j}"  placeholder="0" type="number">`;
+                    `<input class="m2${i} m2${j}" id="m2${i}${j}" placeholder="0" type="number">`;
                     resultmatrix.innerHTML +=
                         `<input class="m3${i} m3${j}" id="m3${i}${j}"  readonly placeholder="0" type="number">`;
                 }
