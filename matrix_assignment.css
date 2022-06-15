@@ -34,3 +34,7 @@ div {
     background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
     animation: normal 2s linear infinite;
 }
+
+span {
+    color: #fff;
+}
