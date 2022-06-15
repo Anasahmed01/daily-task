@@ -22,6 +22,6 @@ button:hover {
 div {
     border-radius: 10%;
     border-style: dashed;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
