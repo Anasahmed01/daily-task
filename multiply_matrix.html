@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  <link rel="stylesheet" href="matrix_assignment.css">
+    <link rel="stylesheet" href="matrix_assignment.css">
 </head>
 
 <body>
-    
+
     <div>
         <h1> Matrix Multiply Table</h1>
         <form onsubmit="getinput(); return false">
 
-            <input type="number"  min="2" id="getinput1" placeholder="number1" required>
+            <input type="number" min="2" id="getinput1" placeholder="number1" required>
             <input type="number" min="2" id="getinput2" placeholder="number2" required>
             <button type="submit">Check</button>
 
@@ -34,7 +34,7 @@
         document.getElementById("onsubmitform").style.visibility = "hidden";
         let value1 = "";
         let value2 = "";
-        
+
         let matrix1 = document.querySelector("#matrix1");
         let matrix2 = document.querySelector("#matrix2");
         let resultmatrix = document.querySelector("#resultmatrix");
@@ -56,9 +56,9 @@
             for (let i = 0; i < value1; i++) {
                 for (let j = 0; j < value2; j++) {
                     matrix1.innerHTML +=
-                    `<input class="m1${i} m1${j}" id="m1${i}${j}" placeholder="0" type="number">`;
+                        `<input class="m1${i} m1${j}" id="m1${i}${j}" placeholder="0" type="number">`;
                     matrix2.innerHTML +=
-                    `<input class="m2${i} m2${j}" id="m2${i}${j}" placeholder="0" type="number">`;
+                        `<input class="m2${i} m2${j}" id="m2${i}${j}" placeholder="0" type="number">`;
                     resultmatrix.innerHTML +=
                         `<input class="m3${i} m3${j}" id="m3${i}${j}"  readonly placeholder="0" type="number">`;
                 }
@@ -73,14 +73,14 @@
 
             let multiply1 = [];
             let multiply2 = [];
-            let multiply3=[];
+            let multiply3 = [];
             for (let i = 0; i < value1; i++) {
                 for (let j = 0; j < value2; j++) {
                     let m1value = +document.querySelector(`#m1${i}${j}`).value;
                     let m2value = +document.querySelector(`#m2${i}${j}`).value;
                     multiply1.push(m1value);
                     multiply2.push(m2value);
-                    
+
                 }
             }
             for (let i = 0; i < value1; i++) {
@@ -94,10 +94,11 @@
             }
             for (let i = 0; i < value1; i++) {
                 for (let j = 0; j < value2; j++) {
+
                     document.querySelector(`#m3${i}${j}`).value = multiply3[i * value1 + j];
                 }
             }
-            
+
         }
     </script>
 </body>
