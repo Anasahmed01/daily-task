@@ -6,32 +6,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
     <title>Matrix Sum</title>
     
 </head>
 
 <body>
-    <h1>Matrix Sum App</h1>
-    
-    <form onsubmit="start(); return false">
-        
-        <input type="number" id="row_size" required min="2">
-         X
-        <input type="number" id="col_size" required min="2">
+    <h1>Matrix Addition final</h1>
+    <p>Enter matrix table size</p>
+    <form class="form1" onsubmit="start(); return false">
+        <label for="">Rows: </label>
+        <input type="number" id="matrix_row_size" required>
+        <label for="">Column: </label>
+        <input type="number" id="matrix_column_size" required>
         <button type="submit">Start</button>
     </form>
-<br>
-<br>
-<form onsubmit="sum(); return false" class="hidden" id="form2">
-
-        <div id="input_1" class="page"></div> +
-        <div id="input_2" class="page"></div> 
-        <button>SUM</button>    
-        <div id="mResult" class="page"></div>
-
+    <br><br><BR></BR>
+    <form onsubmit="sum(); return false" class="form2">
+        <div id="value_input_div1"></div>+
+        <div id="value_input_div2"></div>
+        <button type="submit">SUM</button><br><br>
     </form>
-    
+
+    <br><br>
+    <div id="result_div"></div>
+    <br><br><BR></BR>
+
         <script src="matrix.js"></script>
         
 </body>
