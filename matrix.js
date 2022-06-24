@@ -1,62 +1,53 @@
 let row = "";
-let col = "";
-
-function start() {
-    row = +document.querySelector("#row_size").value;
-    col = +document.querySelector("#col_size").value;
-
-    let input1 = document.querySelector("#input_1");
-    let input2 = document.querySelector("#input_2");
-    let mResult = document.querySelector("#mResult");
-
-    input1.innerHTML = "";
-    input2.innerHTML = "";
-    mResult.innerHTML = "";
-
-    if (row !== col) {
-        alert("Please enter the same number for both inputs");
-        return;
-    }
-    if (isNaN(row) || isNaN(col)) {
-        alert("Please enter a number");
-        return;
-    }
-    if (row < 2 || col < 2) {
-        alert("Please enter a number greater than 1");
-        return;
-    }
-
-    for (let i = 0; i < row; i++) {
-        for (let j = 0; j < col; j++) {
-            input1.innerHTML += `<input type="number" required min="0" max="100" id="m1-${i}-${j}" value="0">`;
-
-            input2.innerHTML += `<input type="number" required min="0" max="100" id="m2-${i}-${j}" value="0">`;
-
-            mResult.innerHTML += `<input type="number" disabled required min="0" max="100" id="mResult-${i}-${j}" value="0">`;
-        }
-        input1.innerHTML += `<br>`;
-        input2.innerHTML += `<br>`;
-        mResult.innerHTML += `<br>`;
-
+        let column = "";
+        let target_result_div = document.querySelector("#result_div");
         
-    }
-    document.querySelector("#form2").classList.remove("hidden");
+        function start() {
+            row = Number(document.querySelector("#matrix_row_size").value);
+            column = Number(document.querySelector("#matrix_column_size").value);
 
-}
+            let target1 = document.querySelector("#value_input_div1");
+            let target2 = document.querySelector("#value_input_div2");
+            target1.innerHTML = "";
+            target2.innerHTML = "";
+            target_result_div.innerHTML = "";
 
+            if (row == "" || column == "") {
+                alert("Please enter values");
+                return;
+            }
+            if (row != column) {
+                alert("Please enter same number  of rows and columns");
+                return;
+            }
+            if (row < 2 || column < 2) {
+                alert("Please enter number greater than 1");
+                return;
+            }
 
-function sum() {
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < column; j++) {
+                    target1.innerHTML += `<input type="number" class="input_boxes" id="matrix_value_${i}${j}" value="0" style="width: 30px;" >`;
+                    target2.innerHTML += `<input type="number" class="input_boxes" id="matrix_value2_${i}${j}" value="0" style="width: 30px;" >`;
+                    target_result_div.innerHTML += `<input type="number" disabled required  id="Result_values_${i}${j}" value="0" style="width: 30px;">`;
+                }
+                target1.innerHTML += "<br>";
+                target2.innerHTML += "<br>";
+                target_result_div.innerHTML += "<br>";
+            } }
 
-    for (let i = 0; i < row; i++) {
-        for (let j = 0; j < col; j++) {
-            console.log("running");
-
-            document.querySelector(`#mResult-${i}-${j}`).value =
-                +document.querySelector(`#m1-${i}-${j}`).value
-                +
-                +document.querySelector(`#m2-${i}-${j}`).value;
+        function sum() {
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < column; j++) {
+                    let value1 = Number(document.querySelector(`#matrix_value_${i}${j}`).value);
+                    let value2 = Number(document.querySelector(`#matrix_value2_${i}${j}`).value);
+                  let result = sumsum(value1, value2)
+                    // let result = value1 + value2;
+                    document.querySelector(`#Result_values_${i}${j}`).value = result;
+                }
+            }
         }
-    }
-
-
-}
+        
+        function sumsum(a , b){
+           return a+b;
+        }
