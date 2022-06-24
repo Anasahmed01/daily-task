@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,40 +6,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="matrix.js"></script>
-    <link rel="stylesheet" href="matrix_assignment.css">
-    <title>Matrix Addition</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Matrix Sum</title>
+    
 </head>
 
 <body>
-    <div class="container">
-        <h1>Matrix Sum App</h1>
+    <h1>Matrix Sum App</h1>
+    
+    <form onsubmit="start(); return false">
+        
+        <input type="number" id="row_size" required min="2">
+         X
+        <input type="number" id="col_size" required min="2">
+        <button type="submit">Start</button>
+    </form>
+<br>
+<br>
+<form onsubmit="sum(); return false" class="hidden" id="form2">
 
-        <form onsubmit="start(); return false">
+        <div id="input_1" class="page"></div> +
+        <div id="input_2" class="page"></div> 
+        <button>SUM</button>    
+        <div id="mResult" class="page"></div>
 
-            <input type="number" required min="2" id="input1">
-            <span> x</span>
-            <input type="number" required min="2" id="input2">
-            <button class="rainbow rainbow-2" type="submit">Create</button>
-            <div id="message"></div>
-        </form>
-
-        <br>
-        <br>
-
-        <!-- Input form consealed -->
-        <form onsubmit="sum(); return false" class="hidden" id="consealedInputForm">
-
-            <div id="mInput1" class="mInput"></div>
-            <span>+</span>
-            <div id="mInput2" class="mInput"></div>
-            <br><br>
-            <div><button class="rainbow rainbow-2">Sum</button></div>
-
-            <div id="mResult" class="mInput"></div>
-
-        </form>
-    </div>
+    </form>
+    
+        <script src="app.js"></script>
+        
 </body>
 
 </html>
